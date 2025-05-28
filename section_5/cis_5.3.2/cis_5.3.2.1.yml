@@ -10,6 +10,10 @@ file:
     contents:
     - '/^account\s*\[success=\d new_authtok_reqd=done default=ignore\]\s*pam_unix.so/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_system_type: {{ .Vars.system_type }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:
@@ -28,6 +32,10 @@ file:
     contents:
     - '/^\s*session\s*required\s+pam_unix.so/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_system_type: {{ .Vars.system_type }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:
@@ -46,6 +54,10 @@ file:
     contents:
     - '/^\s*auth\s+\[success=\d default=.*\]\s+pam_unix.so/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_system_type: {{ .Vars.system_type }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:
@@ -64,6 +76,10 @@ file:
     contents:
     - '/^\s*password\s+\[success=\d default=.*\]\s+pam_unix.so/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_system_type: {{ .Vars.system_type }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:

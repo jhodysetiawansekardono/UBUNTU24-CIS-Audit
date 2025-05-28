@@ -13,6 +13,10 @@ command:
     stdout:
     - '/.*\:difok\s*=\s*[2-9]/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_system_type: {{ .Vars.system_type }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:
@@ -31,6 +35,10 @@ file:
     contents:
     - '!/^\s+password\s+(requisite|required|sufficient)\s+pam_pwquality\.so\s+([^#\n\r]+\s+)?difok\s*=\s*([0-1])\b/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_system_type: {{ .Vars.system_type }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:

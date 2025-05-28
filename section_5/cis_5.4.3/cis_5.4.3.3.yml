@@ -11,6 +11,10 @@ command:
     - '/(?i)umask\s+0[2-7][7]/'
     - '!/(?i)umask\s+[7][0-1][0-6]/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_system_type: {{ .Vars.system_type }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:

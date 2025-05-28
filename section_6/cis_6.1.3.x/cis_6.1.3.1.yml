@@ -7,6 +7,10 @@ package:
     title: 6.1.3.1 | Ensure rsyslog is installed
     installed: true
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_system_type: {{ .Vars.system_type }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:

@@ -46,6 +46,16 @@ Fot the latest information on audit and how it can be used please visit
 
 [Read the Docs - Audit]
 
+## Add Metadata
+
+Open your powershell and paste this command
+```powershell
+.\add-metadata.ps1 -MetaKey "host_hostname" -MetaValue "{{ .Vars.os_hostname }}"
+.\add-metadata.ps1 -MetaKey "host_system_type" -MetaValue "{{ .Vars.system_type }}"
+.\add-metadata.ps1 -MetaKey "host_os_distribution" -MetaValue "{{ .Vars.os_distribution }}"
+.\add-metadata.ps1 -MetaKey "host_os_release" -MetaValue "{{ .Vars.os_release }}"
+```
+
 ## Extra settings
 
 Ability to add your own requirements is available in several sections

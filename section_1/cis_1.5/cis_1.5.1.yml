@@ -7,6 +7,10 @@ kernel-param:
     title: 1.5.1 | Ensure address space layout randomization (ASLR) is enabled | sysctl_live
     value: '2'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_system_type: {{ .Vars.system_type }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:
@@ -27,6 +31,10 @@ command:
     stdout:
     - '/kernel.randomize_va_space(\s|)=(\s|)2/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_system_type: {{ .Vars.system_type }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:

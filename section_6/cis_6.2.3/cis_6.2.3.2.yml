@@ -11,6 +11,10 @@ command:
     - '/.*:-a always,exit -F arch=b64 -C euid!=uid -F auid!=(unset|4294967295|-1) -S execve -k user_emulation/'
     - '/.*:-a always,exit -F arch=b32 -C euid!=uid -F auid!=(unset|4294967295|-1) -S execve -k user_emulation/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_system_type: {{ .Vars.system_type }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 2
       workstation: 2
       CIS_ID:
@@ -30,6 +34,10 @@ command:
     - '/-a always,exit -F arch=b64 -S execve -C uid!=euid -F auid!=(unset|4294967295|-1) -F key=user_emulation/'
     - '/-a always,exit -F arch=b32 -S execve -C uid!=euid -F auid!=(unset|4294967295|-1) -F key=user_emulation/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_system_type: {{ .Vars.system_type }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 2
       workstation: 2
       CIS_ID:
