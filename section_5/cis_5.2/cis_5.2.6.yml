@@ -11,6 +11,10 @@ command:
     - '!/timestamp_timeout=(-1|1[6-9]|[2-9][0-9]|[1-9][0-9]{2,})/'
     - '/timestamp_timeout=([5-9]|1[0-5])/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:

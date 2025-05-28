@@ -8,6 +8,10 @@ package:
     title: 6.3.1 | Ensure AIDE is installed | aide pkg
     installed: true
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID: 6.3.1
@@ -21,6 +25,10 @@ package:
     title: 6.3.1 | Ensure AIDE is installed | aide-common pkg
     installed: true
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:

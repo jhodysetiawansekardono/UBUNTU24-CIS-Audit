@@ -7,6 +7,10 @@ kernel-param:
     title: 1.5.2 | Ensure ptrace_scope is restricted | sysctl_live
     value: '1'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:
@@ -27,6 +31,10 @@ command:
     stdout:
     - '/kernel.yama.ptrace_scope\s*=\s*1/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:

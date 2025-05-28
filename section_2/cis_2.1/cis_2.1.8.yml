@@ -10,6 +10,10 @@ package:
     name: dovecot-imapd
     installed: false
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:
@@ -26,6 +30,10 @@ package:
     name: dovecot-pop3d
     installed: false
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:
@@ -47,6 +55,10 @@ file:
     filetype: symlink
     linked-to: /dev/null
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:
@@ -65,6 +77,10 @@ file:
     filetype: symlink
     linked-to: /dev/null
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:

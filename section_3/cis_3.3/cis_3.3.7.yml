@@ -7,6 +7,10 @@ kernel-param:
     title: 3.3.7 | Ensure Reverse Path Filtering is enabled | ipv4 all rp_filter
     value: '1'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:
@@ -26,6 +30,10 @@ kernel-param:
     title: 3.3.7 | Ensure Reverse Path Filtering is enabled | ipv4 default rp_filter
     value: '1'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:
@@ -52,6 +60,10 @@ command:
     stdout:
     - '/^\/etc\/sysctl.*:net.ipv4.conf.all.rp_filter\s*=\s*1/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:
@@ -77,6 +89,10 @@ command:
     stdout:
     - '/^\/etc\/sysctl.*:net.ipv4.conf.default.rp_filter\s*=\s*1/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:

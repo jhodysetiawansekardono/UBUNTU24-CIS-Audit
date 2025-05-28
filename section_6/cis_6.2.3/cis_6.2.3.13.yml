@@ -11,6 +11,10 @@ command:
     - '/-a always,exit -F arch=b64 -S unlink,unlinkat,rename,renameat -F auid>=1000 -F auid!=(unset|4294967295|-1) -k delete/'
     - '/-a always,exit -F arch=b32 -S unlink,unlinkat,rename,renameat -F auid>=1000 -F auid!=(unset|4294967295|-1) -k delete/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 2
       workstation: 2
       CIS_ID:
@@ -31,6 +35,10 @@ command:
     - '/-a always,exit -F arch=b64 -S rename,unlink,unlinkat,renameat -F auid>=1000 -F auid!=(unset|4294967295|-1) -F key=delete/'
     - '/-a always,exit -F arch=b32 -S unlink,rename,unlinkat,renameat -F auid>=1000 -F auid!=(unset|4294967295|-1) -F key=delete/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 2
       workstation: 2
       CIS_ID:

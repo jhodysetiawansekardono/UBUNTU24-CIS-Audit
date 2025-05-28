@@ -7,6 +7,10 @@ kernel-param:
     title: 3.3.8 | Ensure source routed packets are not accepted | IPv6 all source routed
     value: '0'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:
@@ -26,6 +30,10 @@ kernel-param:
     title: 3.3.8 | Ensure source routed packets are not accepted | IPv6 default source routed
     value: '0'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:
@@ -52,6 +60,10 @@ command:
     stdout:
     - '/^net.ipv6.conf.all.accept_source_route= 0/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:
@@ -77,6 +89,10 @@ command:
     stdout:
     - '/^net.ipv6.conf.default.accept_source_route(\s|)=(\s|)0/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:

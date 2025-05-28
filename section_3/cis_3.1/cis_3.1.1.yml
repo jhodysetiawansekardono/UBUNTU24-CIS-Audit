@@ -13,6 +13,10 @@ command:
     - '/^\s*linux.*ipv6.disable=1/'
     - '!/ipv6.disable=0/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 2
       workstation: 2
       CIS_ID: 3.1.1
@@ -31,6 +35,10 @@ command:
     - '/^GRUB_CMDLINE_LINUX=.*ipv6.disable=1/'
     - '!/ipv6.disable=0/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 2
       workstation: 2
       CIS_ID: 3.1.1
@@ -51,6 +59,10 @@ command:
     contents:
     - '/^1/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 2
       workstation: 2
       CIS_ID: 3.3.1

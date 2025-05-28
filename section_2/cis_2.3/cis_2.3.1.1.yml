@@ -7,6 +7,10 @@ package:
     title: 2.3.1.1 | Ensure a single time synchronization daemon is in use
     installed: true
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID: 2.3.1.1
@@ -23,6 +27,10 @@ package:
     title: 2.3.1.1 | Ensure time synchronization is in use | ntp service
     installed: false
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID: 2.3.1.1
@@ -38,6 +46,10 @@ package:
     title: 2.3.1.1 | Ensure time synchronization is in use | chrony service
     installed: false
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID: 2.3.1.1

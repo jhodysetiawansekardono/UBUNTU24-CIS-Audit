@@ -11,6 +11,10 @@ command:
     - '/.*\:-w /var/run/faillock -p wa -k logins/'
     - '/.*\:-w /var/log/lastlog -p wa -k logins/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 2
       workstation: 2
       CIS_ID:
@@ -30,6 +34,10 @@ command:
     - '-w /var/run/faillock -p wa -k logins'
     - '-w /var/log/lastlog -p wa -k logins'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 2
       workstation: 2
       CIS_ID:

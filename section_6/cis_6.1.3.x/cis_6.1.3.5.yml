@@ -21,6 +21,10 @@ file:
     - '/^local4,local5.\*\s+-/var/log/localmessages/'
     - '/^local6,local7.\*\s+-/var/log/localmessages/'
     meta:
+      host_os_release: {{ .Vars.os_release }}
+      host_system_type: {{ .Vars.system_type }}
+      host_os_distribution: {{ .Vars.os_distribution }}
+      host_hostname: {{ .Vars.os_hostname }}
       server: 1
       workstation: 1
       CIS_ID:
