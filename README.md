@@ -50,10 +50,10 @@ Fot the latest information on audit and how it can be used please visit
 
 Open your powershell and paste this command
 ```powershell
-.\add-hostname.ps1 -MetaKey "host_hostname" -MetaValue "{{ .Vars.os_hostname }}"
-.\add-hostname.ps1 -MetaKey "host_system_type" -MetaValue "{{ .Vars.system_type }}"
-.\add-hostname.ps1 -MetaKey "host_os_distribution" -MetaValue "{{ .Vars.os_distribution }}"
-.\add-hostname.ps1 -MetaKey "host_os_release" -MetaValue "{{ .Vars.os_release }}"
+.\add-metadata.ps1 -MetaKey "host_hostname" -MetaValue "{{ .Vars.os_hostname }}"
+.\add-metadata.ps1 -MetaKey "host_system_type" -MetaValue "{{ .Vars.system_type }}"
+.\add-metadata.ps1 -MetaKey "host_os_distribution" -MetaValue "{{ .Vars.os_distribution }}"
+.\add-metadata.ps1 -MetaKey "host_os_release" -MetaValue "{{ .Vars.os_release }}"
 ```
 
 ## Extra settings
